@@ -19,4 +19,14 @@ INPUT:
 */
 
 
-// Solution 
+// Solution
+
+function coin(n, acc = '') {
+  if (n === 0) {
+    return [acc];
+  }
+  return [
+    ...coin(n - 1, acc + 'H'), 
+    ...coin(n - 1, acc + 'T')
+  ];
+}
