@@ -17,3 +17,6 @@ coin(2) should return "HH,HT,TH,TT"
 INPUT:
   0 < n < 18
 */
+
+
+// Solution 
