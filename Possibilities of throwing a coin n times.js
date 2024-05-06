@@ -30,3 +30,5 @@ function coin(n, acc = '') {
     ...coin(n - 1, acc + 'T')
   ];
 }
+
+// or
