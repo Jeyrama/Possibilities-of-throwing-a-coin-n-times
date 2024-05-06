@@ -32,3 +32,22 @@ function coin(n, acc = '') {
 }
 
 // or
+
+function coin(n) {
+  let psbl = [];
+  for(let i = 0; i < Math.pow(2, n); i++) {
+    psbl.push(i.toString(2));
+  }
+  
+  psbl.map((item, i, arr) => {
+    if(item.length < n) {
+      while(arr[i].length !== n) {
+        arr[i] = '0' + arr[i];
+      }
+    }
+    
+    arr[i] = arr[i].replace(/0/g, 'H');
+    arr[i] = arr[i].replace(/1/g, 'T');
+  });
+  return psbl;
+}
